@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='top'>社区列表</view>
+  <view class='page_row' bindtap="suo">
+    <view class="search">
+      <view class="df search_arr">
+        <icon class="searchcion" size='20' type='search'></icon>
+        <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}" /> </view>
+    </view>
+    <view class='sousuo'>搜索</view>
+  </view>
+  <scroll-view class="article" scroll-y="true">
+    <view class='list'>
+      <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+        <view class="list_item">
+          <navigator url='details?id={{item.goods_id}}'>
+            <view class='img'>
+              <image src="{{imghref}}{{item.goods_img}}" mode="scaleToFill" />                 </view>
+            <view class='info'>
+              <view class='title'>小区名称：{{item.goods_title}}</view>
+              <view class='price'>详细地址：{{item.goods_site}}</view>
+            </view>
+          </navigator>
+          <view class='clear'></view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
