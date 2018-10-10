@@ -1,45 +1,25 @@
 //index.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
+var owners = require("../../utils/owners.js");
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    dataList: [{
-      goods_id: 1,
-      goods_title: '曼谷4',
-      goods_img: '../image/1.jpg',
-      goods_site: '广州白云区'
-    }, {
-        goods_id: 1,
-        goods_title: '曼谷4',
-        goods_img: '../image/1.jpg',
-        goods_site: '广州白云区'
-    }, {
-        goods_id: 1,
-        goods_title: '曼谷4',
-        goods_img: '../image/1.jpg',
-        goods_site: '广州白云区'
-    }, {
-      goods_id: 1,
-      goods_title: '曼谷4',
-        goods_img: '../image/1.jpg',
-      goods_site: '广州白云区'
-    }, {
-        goods_id: 1,
-        goods_title: '曼谷4',
-        goods_img: '../image/1.jpg',
-        goods_site: '广州白云区'
-    }],
+    keyWord: "",
   },
-  //事件处理函数
-  bindViewTap: function() {
-    
+  onLoad: function (options) {
+    var list = [];
+    list = owners.dataList();
+    this.setData({
+      dataList: list,
+    });
+    console.log(list);
   },
-  onLoad: function() {
   
+  // 获得用户输入的关键字
+  getKeyWord: function (e) {
+    this.getData({
+      keyWord: e.detail.value
+    });
   }
 })

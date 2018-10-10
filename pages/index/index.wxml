@@ -5,13 +5,13 @@
     <view class="search">
       <view class="df search_arr">
         <icon class="searchcion" size='20' type='search'></icon>
-        <input class="" disabled placeholder="请输入关键字" value="{{searchValue}}" /> </view>
+        <input class="name" bindblur='getKeyWord'  placeholder="请输入关键字" value="{{searchValue}}" /> </view>
     </view>
     <view class='sousuo'>搜索</view>
   </view>
   <scroll-view class="article" scroll-y="true">
     <view class='list'>
-      <block wx:for='{{dataList}}' wx:key='list' wx:for-item="item">
+      <block wx:for='{{dataList}}' wx:key='goods_id' wx:for-item="item">
         <view class="list_item">
           <navigator url='details?id={{item.goods_id}}'>
             <view class='img'>
