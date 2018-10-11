@@ -9,7 +9,6 @@ Page({
    * 页面的初始数据
    */
   data: {
-
   },
 
   /**
@@ -17,6 +16,15 @@ Page({
    */
   onLoad: function (options) {
     this.getPlot(options);
+    var that=this;
+    wx.getUserInfo({
+      success: function (res) {
+        that.setData({
+          nickName: res.userInfo.nickName,
+          avatarUrl: res.userInfo.avatarUrl,
+        })
+      },
+    })
   },
 
   getPlot:function(e){

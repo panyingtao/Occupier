@@ -17,9 +17,28 @@
 /* 导航图片 */
 .imgShow{
   position: absolute;
-  top: 5%;
+  top: 6%;
   width: 100%;
 }
 .imgShow image{
   width: 100%;
+  height: 153px;
+}
+
+.article{
+  position: absolute;
+  top: 36%;
+  border: 1px #aaa solid;
+  background-color: #aaa;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
 }

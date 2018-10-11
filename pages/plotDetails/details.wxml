@@ -1,9 +1,12 @@
 <view class="container">
   <view class='top'>{{plot.goods_title}}</view>
   <view class='imgShow'>
-    <image mode='aspectFill' src='{{plot.goods_img}}'></image>
+    <image mode='scaleToFill' src='{{plot.goods_img}}'></image>
   </view>
   <scroll-view class='article' scroll-y='true'>
-
+    <view>
+         <image  class="userinfo-avatar" src="{{avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{nickName}}</text>
+    </view>
   </scroll-view>
 </view>
