@@ -1,4 +1,8 @@
 // pages/plotDetails/details.js
+//获取应用实例
+const app = getApp();
+var owners = require("../../utils/owners.js");
+
 Page({
 
   /**
@@ -12,7 +16,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.getPlot(options);
+  },
 
+  getPlot:function(e){
+    var list = owners.dataList();
+    for(var i in list){
+      if (list[i].goods_id == e.id){
+        this.setData({
+          plot:list[i]
+        });
+        break;
+      }
+    }
   },
 
   /**
