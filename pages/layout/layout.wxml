@@ -1,0 +1,11 @@
+<view class='container'>
+  <view class='item head'>
+    <view class='title'>社区列表</view>
+  </view>
+  <view class='item navigation_img'>
+    <image  class="userinfo-avatar" src="../image/1.jpg" mode="cover"></image>
+  </view>
+  <view class=' navigation'></view>
+  <view class='item details'></view>
+  <view class='item features'></view>
+</view>

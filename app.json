@@ -1,7 +1,9 @@
 {
   "pages":[
+    "pages/layout/layout",
     "pages/index/index",
     "pages/plotDetails/details"
+   
   ],
   "window":{
     "backgroundTextStyle":"light",
